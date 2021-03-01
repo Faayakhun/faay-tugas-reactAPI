@@ -36,9 +36,9 @@ export default function Pokemon() {
            <ul>
            <li>{listAbilities()}</li>
            </ul>
-           <ul>
            <h4>Moves List :</h4>
-           <li>{moveList([0])}</li>
+           <ul>
+           <li>{moveList()}</li>
            </ul>
         </div>
     )
