@@ -20,14 +20,15 @@ export default function Pokemon() {
         })
     }
 
-    const listMoves = poke.moves
-    const moveList = () => {
-        return listMoves.map((value, id)=> {
-            return  <div key={id}>
-                    <p>{value.move.name}</p>
-                </div>
-            })
-    }
+    // const listMoves = poke.moves
+    // const moveList = () => {
+    //     return listMoves.map((value, id)=> {
+            
+    //         return <div key={id}>
+    //             <p>{value.move.name}</p>
+    //         </div>
+    //         })
+    // }
     
     return (
         <div>
@@ -38,7 +39,11 @@ export default function Pokemon() {
            </ul>
            <h4>Moves List :</h4>
            <ul>
-           <li>{moveList()}</li>
+           <li>{poke.moves.filter((item, index) => index < 2 ).map((item,index) => (
+               <div key ="index">
+               <p>{item.move.name}</p>
+               </div>
+           ))}</li>
            </ul>
         </div>
     )
